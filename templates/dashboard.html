@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <h1>📊 Smart Hospital Dashboard</h1>
+    <div>
+        <a href="/">Home</a>
+        <a href="/online">Online</a>
+        <a href="/walkin">Walk-in</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/waiting">Check Waiting</a>
+    </div>
+</nav>
+
+<div class="container">
+    <a href="/serve_next" class="btn">Serve Next Patient 🚑</a>
+
+    <table>
+        <tr>
+            <th>Queue</th>
+            <th>Token</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Estimated Wait ⏳</th>
+        </tr>
+        {% for p in patients %}
+        <tr>
+            <td>{{ p.queue }}</td>
+            <td>{{ p.token }}</td>
+            <td>{{ p.name }}</td>
+            <td>{{ p.type }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.status }}</td>
+            <td>{{ p.wait }} min</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {font-family: Arial,sans-serif; margin:0; background:#f0f2f5;}
+nav {background:#1976d2;color:white;padding:10px 30px;display:flex;justify-content:space-between;align-items:center;}
+nav h1{margin:0; font-size:22px;}
+nav a{color:white;text-decoration:none;margin-left:15px; font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+
+.container{padding:30px; max-width:1200px; margin:auto;}
+
+/* Hero Section */
+.hero-bg{background:#1976d2;color:white;border-radius:15px;padding:30px;text-align:center;margin-bottom:30px;box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+.hero-bg h2{font-size:28px;margin-bottom:10px;}
+.hero-bg p{font-size:16px;margin-bottom:5px;}
+.quote{font-style:italic;margin-top:10px;opacity:0.9;font-size:16px;}
+
+/* Cards */
+.card{background:white;padding:25px;margin-bottom:25px;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.center-card{max-width:450px;margin:30px auto;}
+input,select,button{display:block;width:100%;padding:10px;margin-bottom:15px;border-radius:5px;border:1px solid #ccc;}
+button{background:#1976d2;color:white;border:none;cursor:pointer;transition: background 0.3s;}
+button:hover{background:#0d47a1;}
+
+/* Action Cards (Home) */
+.action-grid{display:flex;gap:25px;flex-wrap:wrap;justify-content:center;}
+.action-card{flex:1;min-width:250px;background:white;border-radius:15px;padding:25px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);transition: transform 0.3s, box-shadow 0.3s;}
+.action-card:hover{transform: translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,0.2);}
+.action-card h3{font-size:22px;margin-bottom:10px;}
+.action-card p{font-size:16px;margin-bottom:15px;}
+.action-card a{display:inline-block;background:#1976d2;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;}
+.action-card a:hover{background:#0d47a1;}
+.card-color1{border-top:5px solid #ff5252;}
+.card-color2{border-top:5px solid #ffb300;}
+.card-color3{border-top:5px solid #4caf50;}
+.card-color4{border-top:5px solid #2196f3;}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin-top:20px;}
+th,td{padding:12px;border:1px solid #ddd;text-align:center;}
+.btn{display:inline-block;background:#1976d2;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;margin-bottom:10px;}
+.btn:hover{background:#0d47a1;}
+.back-btn{display:block;text-align:center;margin-top:15px;background:#555;color:white;padding:10px;border-radius:5px;text-decoration:none;}
+.back-btn:hover{background:#333;}

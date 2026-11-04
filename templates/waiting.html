@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Waiting Time</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <h1>⏳ Check Your Queue Status</h1>
+    <div>
+        <a href="/">Home</a>
+        <a href="/online">Online</a>
+        <a href="/walkin">Walk-in</a>
+        <a href="/dashboard">Dashboard</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="card center-card">
+        <form method="POST">
+            <label>Enter Token Number</label>
+            <input type="number" name="token" placeholder="Enter your token" required>
+            <button type="submit">Check Status ⏳</button>
+        </form>
+
+        {% if patient %}
+        <hr>
+        <h3>🧾 Queue Details</h3>
+        <p><b>Status:</b> {{ patient.status }}</p>
+        <p><b>Queue Position:</b> {{ patient.queue }}</p>
+        <p><b>Estimated Waiting Time:</b> {{ patient.wait }} minutes</p>
+
+        {% if patient.status=="Waiting" %}
+            <p style="color:#1976d2;">⏳ Please wait. You will be served soon.</p>
+        {% elif patient.status=="Serving" %}
+            <p style="color:green;">🟢 You are being served now. Please proceed.</p>
+        {% elif patient.status=="Completed" %}
+            <p style="color:gray;">✔ Your consultation is complete. Thank you!</p>
+        {% endif %}
+        {% endif %}
+
+        <a href="/" class="btn back-btn">🏠 Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>
